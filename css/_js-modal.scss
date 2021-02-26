@@ -1,0 +1,121 @@
+/* Modal CSS */
+.modal-wrapper {
+  bottom: 0;
+  cursor: pointer;
+  height: 0;
+  min-height: 0;
+  opacity: 0;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  -moz-transition: 0.4s opacity;
+  -webkit-transition: 0.4s opacity;
+  transition: 0.4s opacity;
+  width: 100%;
+  will-change: opacity;
+  z-index: 9999;
+}
+
+.modal-wrapper.open {
+  height: auto;
+  min-height: 100vh;
+  opacity: 1;
+  padding: 3rem 5%;
+}
+
+.modal-wrapper.slide-out {
+  background: rgba(21, 36, 43, 0.7);
+  overflow: auto;
+  padding: 0;
+}
+
+.modal-inner {
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+.modal-wrapper.slide-out .modal-inner {
+  height: 100%;
+  left: -100%;
+  margin: 0;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  transition: 0.4s all;
+  min-width: 20rem;
+  max-width: 35rem;
+  width: 86%;
+  will-change: left, right;
+}
+
+.modal-wrapper.slide-out.open .modal-inner {
+  left: 0;
+}
+
+.modal-wrapper.slide-out.open .modal-content {
+  background-color: rgba(0, 0, 0, 0.8);
+} // makes sure content is legible even when no other bg is present
+
+.modal-wrapper.slide-out.slide-out-right .modal-inner {
+  left: auto;
+  right: -100%;
+}
+
+.modal-wrapper.slide-out.slide-out-right.open .modal-inner {
+  right: 0;
+}
+
+.modal-wrapper .main-nav-label {
+  display: block;
+  margin-bottom: 2rem;
+  padding-right: 2.5rem;
+}
+
+.modal-close-x {
+  background-color: rgba(21, 36, 43, 0.25);
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4yIiBiYXNlUHJvZmlsZT0idGlueSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiDQoJIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijk3LjksMTIgODgsMi4xIDQ5LjksNDAuMiAxMS44LDIuMSAxLjksMTIgNDAsNTAuMSAxLjksODguMiAxMS44LDk4LjEgNDkuOSw2MCA4OCw5OC4xIDk3LjksODguMiANCgk1OS44LDUwLjEgIi8+DQo8L3N2Zz4NCg==");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 42% auto;
+  border-radius: 2rem;
+  cursor: pointer;
+  height: 2rem;
+  position: absolute;
+  right: 1rem;
+  text-indent: -9999px;
+  top: 1rem;
+  width: 2rem;
+  z-index: 9999;
+}
+
+.modal-close-x:hover {
+  background-color: rgba(21, 36, 43, 0.75);
+}
+
+.modal-wrapper nav {
+  cursor: default;
+  min-height: 100vh;
+  overflow: unset;
+  margin: 0;
+  padding: 2.5rem;
+  padding-top: 1.5rem;
+  text-align: left;
+}
+
+.modal-wrapper .site-language-nav {
+  font-size: 1.25em;
+  line-height: 1.7;
+}
+
+/* Tablet and up */
+@media only screen and (min-width: $mobile-tablet-breakpoint) {
+  .modal-close-x {
+    height: 2.5rem;
+    right: 1rem;
+    top: 1rem;
+    width: 2.5rem;
+  }
+}

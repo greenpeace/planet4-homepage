@@ -1,0 +1,126 @@
+/* form styles */
+.input {
+  font-family: $roboto;
+  margin-bottom: $space-sm;
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea,
+  select {
+    display: block;
+    font-family: $roboto;
+    width: 100%;
+  }
+
+  textarea {
+    font-size: $font-size-sm;
+    min-height: 7rem;
+  }
+}
+
+.input-radio,
+.input-checkbox {
+  display: flex;
+  position: relative;
+  padding-left: calc(1em + #{$space-sm});
+
+  label[for] {
+    cursor: pointer;
+  }
+
+  input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+  }
+
+  input + label::before {
+    content: "";
+    border-radius: 100px;
+    border: 1px solid;
+    display: inline-block;
+    height: 1em;
+    left: 0;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    width: 1em;
+  }
+
+  input:focus + label::before {
+    box-shadow: 0 0 1px 0 currentColor;
+  }
+
+  input:focus + label::before,
+  input:hover + label::before {
+    opacity: 1;
+  }
+
+  input:checked + label::before {
+    background: radial-gradient(currentColor 35%, rgba(255, 0, 0, 0) 36%);
+    opacity: 1;
+  }
+}
+
+.input-radio-group {
+  margin-bottom: $space-md;
+}
+
+.radio-group-label {
+  font-weight: bold;
+  font-size: $font-size-xl;
+  margin-bottom: $space-md;
+}
+
+.input-text,
+.input-textarea {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.input-text label,
+.input-textarea label {
+  color: #6f7376;
+  cursor: text;
+  font-weight: 400;
+  left: 15px;
+  position: absolute;
+  top: 12px;
+  transition: 100ms all;
+}
+/* When input has focus and/or contains data, shrink the label and move it up */
+.input-text input:focus + label,
+.input-text input.contains-input + label,
+.input-textarea textarea:focus + label,
+.input-textarea textarea.contains-input + label {
+  font-size: 11px;
+  font-weight: 500;
+  top: 6px;
+}
+
+.input-text input,
+.input-textarea textarea {
+  border: 1.5px solid #a3a5a7;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 16px;
+  padding: 22px 14px 8px;
+  min-width: 100%;
+}
+
+.input-text input:hover
+.input-textarea textarea:hover {
+  border: 1px solid #6f7376;
+}
+/* Replace default focus style with border-color */
+.input-text input:focus,
+.input-textarea textarea:focus {
+  border-color: rgba(0, 109, 253, 0.75);
+  outline: 0 none;
+}

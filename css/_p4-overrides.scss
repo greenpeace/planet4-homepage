@@ -1,0 +1,96 @@
+/* Tweaking and modifying the P4 css */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+  line-height: 1.25;
+}
+
+p, li {
+  margin-top: 0;
+  @include x-large-and-up {
+    font-size: 1.125rem;
+  }
+}
+
+p {
+  margin-bottom: $space-sm;
+}
+
+p:last-child,
+li:last-child,
+blockquote:last-child {
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-size: $font-size-lg;
+  margin: 0 0 $space-md;
+  max-width: 100%;
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+.btn,
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: $space-md 24px;
+  white-space: nowrap;
+}
+
+.btn-secondary {
+  width: auto;
+  max-width: 25rem;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .btn {
+    margin: 0 $space-xs $space-sm 0;
+  }
+}
+
+nav li {
+  list-style-type: none;
+}
+
+.expando {
+  border-color: rgba(0, 0, 0, 0.1);
+  font-family: $roboto;
+}
+
+.expando-link {
+  color: inherit;
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Extra variables
+$mobile-tablet-breakpoint: $medium-width;
+$tablet-desktop-breakpoint: $large-width;

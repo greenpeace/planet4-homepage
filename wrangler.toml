@@ -1,0 +1,4 @@
+name = "planet4-homepage"
+type = "javascript"
+workers_dev = false
+route = "planet4.greenpeace.org/*"

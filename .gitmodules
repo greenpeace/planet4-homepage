@@ -1,0 +1,3 @@
+[submodule "styleguide"]
+	path = css/styleguide
+	url = https://github.com/greenpeace/planet4-styleguide.git

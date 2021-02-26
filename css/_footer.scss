@@ -1,0 +1,54 @@
+/* Footer styles */
+#site-footer {
+  background-color: #042a40;
+  color: $white;
+  font-family: $roboto;
+  font-size: $font-size-sm;
+
+  a {
+    color: $white;
+  }
+
+  @include medium-and-up {
+    .section-inner {
+      display: grid;
+      grid-gap: $space-xl;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  nav {
+    margin-bottom: $space-lg;
+  }
+
+  nav h2 {
+    font-size: $font-size-lg;
+    margin-bottom: $space-sm;
+  }
+
+  nav ul {
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  nav li {
+    list-style-type: none;
+  }
+
+  #site-footer-info {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+
+    .site-footer-p4-name {
+      font-size: $font-size-lg;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: $space-sm;
+    }
+  }
+}
+
+.illo-credit {
+  font-size: $font-size-xs;
+  margin-top: $space-xl;
+}

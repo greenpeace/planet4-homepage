@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "planet4-homepage",
+  "version": "1.0.0",
+  "description": "A basic microsite for Greenpeace Planet 4 project",
+  "main": "index.js",
+  "scripts": {
+    "lint-js": "eslint index.js 'js/**.js'",
+    "lint-css": "stylelint 'css/**/*.scss'",
+    "build-sass": "sass css/style.scss | cleancss -o dist/style.css",
+    "build-js": "uglifyjs --compress --output dist/app.js -- js/scripts.js js/scripts-features.js",
+    "build": "npm run build-sass && npm run build-js && cp -r index.html img/ features/ dist/",
+    "publish": "gsutil rsync -r dist/ gs://planet4-homepage/"
+  },
+  "license": "GPLv3",
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "stylelint": "^13.11.0"
+  },
+  "dependencies": {
+    "@cloudflare/wrangler": "^1.13.0",
+    "clean-css-cli": "^5.2.0",
+    "sass": "^1.32.8",
+    "uglify-js": "^3.12.8"
+  }
+}
