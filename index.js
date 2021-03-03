@@ -9,8 +9,7 @@ async function handle(request) {
   const requestURL = new URL(request.url);
   const path = requestURL.pathname.replace(/\/+$/, '');
 
-  // if (!path || path == '/') {
-  if (path == '/homepage') {
+  if (!path || path == '/') {
     return await fetch('https://storage.googleapis.com/planet4-homepage/index.html');
   }
 
