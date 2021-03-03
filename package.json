@@ -10,7 +10,7 @@
     "build-sass": "sass css/style.scss | cleancss -o dist/style.css",
     "build-js": "uglifyjs --compress --output dist/app.js -- js/scripts.js js/scripts-features.js",
     "build": "npm run build-sass && npm run build-js && cp -r index.html img/ features/ dist/",
-    "publish": "gsutil rsync -r dist/ gs://planet4-homepage/"
+    "publish": "gsutil -m rsync -r dist/ gs://planet4-homepage/"
   },
   "license": "GPLv3",
   "devDependencies": {
