@@ -91,6 +91,10 @@ nav li {
   text-align: center;
 }
 
+img, iframe, video{
+  max-width: 100%;
+}
+
 // Extra variables
 $mobile-tablet-breakpoint: $medium-width;
 $tablet-desktop-breakpoint: $large-width;

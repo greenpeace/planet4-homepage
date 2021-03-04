@@ -7,10 +7,10 @@ jQuery(document).ready(function($){
   let featuresCounter = 0;
 
   let featureImageArray = [
-    '../img/features/p4-features-engagement-petitions.png',
-    '../img/features/p4-features-engagement-events.png',
-    '../img/features/p4-features-engagement-meaningful.jpg',
-    '../img/features/p4-features-engagement-momentum.jpg'
+    'https://storage.googleapis.com/planet4-homepage/img/features/p4-features-engagement-petitions.png',
+    'https://storage.googleapis.com/planet4-homepage/img/features/p4-features-engagement-events.png',
+    'https://storage.googleapis.com/planet4-homepage/img/features/p4-features-engagement-meaningful.jpg',
+    'https://storage.googleapis.com/planet4-homepage/img/features/p4-features-engagement-momentum.jpg'
   ];
   featureImageArray.forEach(function(img){
     featuresCounter++;
