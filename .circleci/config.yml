@@ -44,6 +44,9 @@ jobs:
           name: Build
           command: npm run build
       - run:
+          name: Replace static domains
+          command: npm run static-prod
+      - run:
           name: Build website
           command: npm run publish
       - run:

@@ -5,7 +5,7 @@
   <!-- Meta tags -->
   <title>Planet 4, Greenpeace's website builder and digital engagement platform</title>
 
-  <base href="https://storage.googleapis.com/planet4-homepage/">
+  <base href="{{ base_url }}">
 
   <meta charset="utf-8">
   <meta name="HandheldFriendly" content="True">
@@ -55,12 +55,12 @@
   <header id="site-header" class="section">
     <div class="section-inner">
       <h1 id="site-header-title">
-        <a href="https://planet4.greenpeace.org/">Planet 4</a>
+        <a href="{{ domain }}">Planet 4</a>
       </h1>
       <nav id="site-header-menu" class="site-menu menu">
         <h2 id="site-header-menu-label" class="site-menu-label">
           <a
-            href="https://planet4.greenpeace.org/#site-footer-menu"
+            href="{{ domain }}#site-footer-menu"
             class="js-modal"
             data-modal-source=".site-header-menu-list"
             data-modal-show-source="true"
@@ -68,13 +68,13 @@
         </h2>
         <ul id="site-header-menu-list" class="site-header-menu-list">
           <li>
-            <a href="https://planet4.greenpeace.org/features">Features</a>
+            <a href="{{ domain }}features">Features</a>
           </li>
           <li>
-            <a href="https://planet4.greenpeace.org/#contact">Contact us</a>
+            <a href="{{ domain }}#contact">Contact us</a>
           </li>
           <li>
-            <a class="nav-btn btn-secondary" href="https://planet4.greenpeace.org/#contact">Request a demo</a>
+            <a class="nav-btn btn-secondary" href="{{ domain }}#contact">Request a demo</a>
           </li>
         </ul>
       </nav>
@@ -89,7 +89,7 @@
           <h2 id="homepage-intro-title" class="section-title" aria-hidden="hidden">Planet 4, Greenpeace's website builder and digital engagement platform.</h2>
           <p>Planet 4 is used as a CMS tool by 45 National Regional Offices in 35 different languages as their primary web presence.</p>
           <p class="intro-cta-container btn-container">
-            <a href="https://planet4.greenpeace.org/#homepage-wordpress" class="btn btn-primary">Learn More</a>&nbsp;
+            <a href="{{ domain }}#homepage-wordpress" class="btn btn-primary">Learn More</a>&nbsp;
           </p>
         </div>
       </div>
@@ -102,7 +102,7 @@
           <h2 id="homepage-wordpress-title" class="section-title">Built on top of Wordpress</h2>
           <p id="homepage-wordpress-description" class="">Planet 4 is a Content Management System built on the WordPress Block Editor framework to allow web admins, content editors and campaigners to update their Greenpeace website or campaign pages.</p>
           <p class="intro-cta-container btn-container">
-            <a href="https://planet4.greenpeace.org/#contact" class="btn btn-primary">Request a demo</a>&nbsp;
+            <a href="{{ domain }}#contact" class="btn btn-primary">Request a demo</a>&nbsp;
           </p>
         </div>
 
@@ -116,7 +116,7 @@
           <h2 id="homepage-campaigns-title" class="section-title">Customize your campaign landing pages</h2>
           <p id="homepage-campaigns-description" class="section-description">Give your pages a unique look and feel to suit your campaign. Choose from our gorgeous pre-defined themes or create your own.</p>
           <p class="intro-cta-container btn-container">
-            <a href="https://planet4.greenpeace.org/#contact" class="btn btn-primary">Request a demo</a>&nbsp;
+            <a href="{{ domain }}#contact" class="btn btn-primary">Request a demo</a>&nbsp;
           </p>
         </div>
       </div>
@@ -147,12 +147,12 @@
             <li class="feature feature-analytics">
               <div class="feature-illo feature-illo-analytics" title="Illustration credit: Freepik Storyset"></div>
               <h3 class="feature-title">
-                <a href="https://planet4.greenpeace.org/features/#features-optimization">Optimized for insights &amp; analytics</a>
+                <a href="{{ domain }}features/#features-optimization">Optimized for insights &amp; analytics</a>
               </h3>
               <p class="feature-description">Understand your audiences' goals and behaviors and use these insights to improve your content.</p>
             </li>
           </ul>
-          <p class="features-more-container"><a href="https://planet4.greenpeace.org/features" class="btn btn-secondary">See all features</a></p>
+          <p class="features-more-container"><a href="{{ domain }}features" class="btn btn-secondary">See all features</a></p>
         </div>
       </div>
     </div>
@@ -229,10 +229,10 @@
         <h2 id="site-footer-menu-label" class="site-menu-label" aria-label="Site Menu">Menu</h2>
         <ul>
           <li>
-            <a href="https://planet4.greenpeace.org/features">Features</a>
+            <a href="{{ domain }}features">Features</a>
           </li>
           <li>
-            <a href="https://planet4.greenpeace.org/#contact">Contact Us</a>
+            <a href="{{ domain }}#contact">Contact Us</a>
           </li>
         </ul>
       </nav>

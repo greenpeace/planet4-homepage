@@ -5,7 +5,8 @@
   <!-- Meta tags -->
   <title>Features - Planet 4</title>
 
-  <base href="https://storage.googleapis.com/planet4-homepage/">
+  <base href="{{ base_url }}">
+
   <meta charset="utf-8">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -58,12 +59,12 @@
   <header id="site-header" class="section">
     <div class="section-inner">
       <h1 id="site-header-title">
-        <a href="https://planet4.greenpeace.org/">Planet 4</a>
+        <a href="{{ domain }}">Planet 4</a>
       </h1>
       <nav id="site-header-menu" class="site-menu menu">
         <h2 id="site-header-menu-label" class="site-menu-label">
           <a
-            href="https://planet4.greenpeace.org/#site-footer-menu"
+            href="{{ domain }}#site-footer-menu"
             class="js-modal"
             data-modal-source=".site-header-menu-list"
             data-modal-show-source="true"
@@ -71,13 +72,13 @@
         </h2>
         <ul id="site-header-menu-list" class="site-header-menu-list">
           <li>
-            <a class="menu-item-active" href="https://planet4.greenpeace.org/features">Features</a>
+            <a class="menu-item-active" href="{{ domain }}features">Features</a>
           </li>
           <li>
-            <a href="https://planet4.greenpeace.org/#contact">Contact us</a>
+            <a href="{{ domain }}#contact">Contact us</a>
           </li>
           <li>
-            <a class="nav-btn btn-secondary" href="https://planet4.greenpeace.org/#contact">Request a demo</a>
+            <a class="nav-btn btn-secondary" href="{{ domain }}#contact">Request a demo</a>
           </li>
         </ul>
       </nav>
@@ -92,7 +93,7 @@
           <h2 id="features-intro-title" class="section-title">Features</h2>
           <p>Custom features, tailored for the needs of the Greenpeace community.</p>
           <p class="intro-cta-container btn-container">
-            <a href="https://planet4.greenpeace.org/#contact" class="btn btn-primary">Request a demo</a>
+            <a href="{{ domain }}#contact" class="btn btn-primary">Request a demo</a>
           </p>
         </div>
       </div>
@@ -304,10 +305,10 @@
         <h2 id="site-footer-menu-label" class="site-menu-label" aria-label="Site Menu">Menu</h2>
         <ul>
           <li>
-            <a href="https://planet4.greenpeace.org/features">Features</a>
+            <a href="{{ domain }}features">Features</a>
           </li>
           <li>
-            <a href="https://planet4.greenpeace.org/#contact">Contact Us</a>
+            <a href="{{ domain }}#contact">Contact Us</a>
           </li>
         </ul>
       </nav>

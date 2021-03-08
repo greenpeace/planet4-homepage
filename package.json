@@ -9,6 +9,8 @@
     "lint-css": "stylelint 'css/**/*.scss'",
     "build-sass": "sass css/style.scss | cleancss -o dist/style.css",
     "build-js": "uglifyjs --compress --output dist/app.js -- js/scripts.js js/scripts-features.js",
+    "static-prod": "replace-in-file '/{{ base_url }}/g' 'https://storage.googleapis.com/planet4-homepage/' dist/index.html,dist/features/index.html --isRegex; replace-in-file '/{{ domain }}/g' 'https://planet4.greenpeace.org/' dist/index.html,dist/features/index.html --isRegex",
+    "static-dev": "replace-in-file '/{{ base_url }}/g' '/' dist/index.html,dist/features/index.html --isRegex ; replace-in-file '/{{ domain }}/g' '/' dist/index.html,dist/features/index.html --isRegex",
     "build": "npm run build-sass && npm run build-js && cp -r index.html img/ features/ dist/",
     "publish": "gsutil -m rsync -r dist/ gs://planet4-homepage/"
   },
@@ -20,6 +22,7 @@
   "dependencies": {
     "@cloudflare/wrangler": "^1.13.0",
     "clean-css-cli": "^5.2.0",
+    "replace-in-file": "^6.2.0",
     "sass": "^1.32.8",
     "uglify-js": "^3.12.8"
   }
