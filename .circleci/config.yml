@@ -6,6 +6,8 @@ docker_auth: &docker_auth
     password: $DOCKERHUB_PASSWORD
 
 defaults: &defaults
+  environment:
+    GOOGLE_PROJECT_ID: planet-4-151612
   docker:
     - image: greenpeaceinternational/circleci-base:latest
       auth:
