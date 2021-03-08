@@ -6,8 +6,6 @@ docker_auth: &docker_auth
     password: $DOCKERHUB_PASSWORD
 
 defaults: &defaults
-  environment:
-      GOOGLE_PROJECT_ID: planet-4-151612
   docker:
     - image: greenpeaceinternational/circleci-base:latest
       auth:
@@ -26,6 +24,27 @@ jobs:
       - run:
           name: Lint js
           command: npm run lint-js
+
+  promote:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - checkout
+      - run:
+          name: Prepare git
+          command: |
+            git config user.email "${GIT_USER_EMAIL}"
+            git config user.name "CircleCI Bot"
+            git config merge.ours.driver true
+      - run:
+          name: Tag
+          command: |
+            current_version=$(git-current-tag.sh)
+            new_version=$(increment-version.sh $current_version)
+            echo "Tagging to ${new_version}"
+            git tag -a "$new_version" -m "$new_version"
+            git push origin --tags
 
   deploy:
     <<: *defaults
@@ -58,6 +77,20 @@ workflows:
     jobs:
       - lint:
           context: cf-workers
+      - hold-promote:
+          type: approval
+          requires:
+            - lint
+          filters:
+            branches:
+              only: main
+      - promote:
+          context: org-global
+          requires:
+            - hold-promote
+          filters:
+            branches:
+              only: main
 
   deploy:
     jobs:
