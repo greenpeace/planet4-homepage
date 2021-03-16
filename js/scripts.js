@@ -148,13 +148,10 @@ Collapsible/expandable content sections.
 
       if ( expandoText ){
         $(this).wrapInner('<div class="'+screenSize+'expando-inner" />').prepend('<a class="'+screenSize+'expando-link" href="#">' + expandoText + '</a>');
-        //console.log('expandoText1!');
       } else if (expandoText2) {
         $(this).wrapInner('<div class="'+screenSize+'expando-inner" />').prepend('<a class="'+screenSize+'expando-link" href="#">' + expandoText2 + '</a>');
-        //console.log('expandoText2!');
       } else if (expandoText3) {
         $(this).wrapInner('<div class="'+screenSize+'expando-inner" />').prepend('<a class="'+screenSize+'expando-link" href="#">' + expandoText3 + '...</a>');
-        //console.log('expandoText3!');
       } else {
         $(this).wrapInner('<div class="'+screenSize+'expando-inner" />').prepend('<a class="'+screenSize+'expando-link" href="#">Click to expand</a>');
       }
@@ -216,6 +213,17 @@ Add .focus class to parent when direct child input has focus
   };
 }(jQuery));
 
+function setupMobileMenuToggle() {
+  const el = document.querySelector('.mobile-toggle');
+  function toggleShownClass() {
+    if (window.matchMedia('(max-width: 480px)').matches) {
+      el.classList.toggleClass('shown');
+    }
+  }
+  el.addEventListener('click', toggleShownClass);
+  el.addEventListener('touchend', toggleShownClass);
+}
+
 /* Run scripts on page ready */
 jQuery(document).ready(function($) {
   $('html').removeClass('no-js').addClass('js');
@@ -226,4 +234,5 @@ jQuery(document).ready(function($) {
   $('.tablet-expando').expando('tablet');
   // Add a 'focus' class to the parent element when input gets focus
   $('input, select, textarea').parentFocus().containsInput();
+  setupMobileMenuToggle();
 });
