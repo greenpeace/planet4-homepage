@@ -356,13 +356,19 @@ body.homepage {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: $space-md;
     margin-top: $space-lg;
+
     @include small-and-up {
       grid-template-columns: repeat(8, 1fr);
     }
+
     @include medium-and-up {
       margin: 0;
       grid-gap: $space-lg;
       grid-template-columns: repeat(5, 1fr);
+    }
+
+    img {
+      border-radius: 50%;
     }
   }
 }
