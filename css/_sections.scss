@@ -9,6 +9,14 @@
   @include large-and-up {
     padding: 72px $space-xxl;
   }
+
+  p {
+    font-family: $roboto, sans-serif;
+  }
+
+  .btn-primary {
+    box-shadow: none;
+  }
 }
 
 .section-inner {
