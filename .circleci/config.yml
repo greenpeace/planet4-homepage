@@ -54,7 +54,7 @@ jobs:
       - checkout
       - run:
           name: Checkout styleguide
-          command: git submodule init && git submodule update
+          command: git submodule update --init --depth 1
       - run:
           name: Activate gcloud
           command: activate-gcloud-account.sh
