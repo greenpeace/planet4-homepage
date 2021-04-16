@@ -15,7 +15,7 @@ async function handle(request) {
   }
 
   if (!path || path == '/') {
-    if (!search.includes('?s=') && !search.includes('&preview=true')) {
+    if (!search.includes('?s=') && !search.includes('&preview=true') && !search.includes('?p=')) {
       return await fetch('https://storage.googleapis.com/planet4-homepage/index.html');
     }
   }
