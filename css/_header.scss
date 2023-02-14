@@ -156,6 +156,7 @@
     margin: 0.3rem 1rem;
     padding: 0.2rem;
     transition: 0.2s all;
+    text-decoration: none;
 
     &:hover {
       text-decoration: none;
@@ -187,6 +188,8 @@
     &:hover,
     &:focus {
       border-color: $dark_blue;
+      background-color: $dark_blue;
+      color: $white;
       border-radius: 4px;
       border-style: solid;
       border-width: 1px;

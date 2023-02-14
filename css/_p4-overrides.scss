@@ -15,6 +15,11 @@ body {
 
 a {
   cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -32,6 +37,7 @@ p, li {
 
 p {
   margin-bottom: $sp-1x;
+  line-height: 1.75rem;
 }
 
 p:last-child,
@@ -63,6 +69,44 @@ ul {
 .btn-secondary {
   width: auto;
   max-width: 25rem;
+  background: transparentize($white, .7);
+  border-color: $dark-blue;
+  color: $dark-blue;
+  box-shadow: none;
+
+  &:visited {
+    color: $dark-blue;
+  }
+
+  &:hover {
+    background: $dark-blue;
+    border-color: $dark-blue;
+    color: $white;
+  }
+
+  &:active {
+    background: $active-blue;
+    border-color: $active-blue;
+  }
+}
+
+.btn-primary {
+  background: $orange;
+  color: $white;
+  border-color: transparent;
+  box-shadow: $primary-button-box-shadow;
+
+  &:visited {
+    color: $white;
+  }
+
+  &:hover,
+  &:active {
+    background: $orange-hover;
+    color: $white;
+    border: 1px solid $orange-hover;
+    box-shadow: $primary-button-box-shadow;
+  }
 }
 
 .btn-container {
