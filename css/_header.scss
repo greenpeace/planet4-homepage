@@ -9,7 +9,7 @@
   display: flex;
   flex-wrap: nowrap;
   font-family: $roboto;
-  padding: 0 $space-sm;
+  padding: 0 $sp-1x;
   width: 100%;
   @include x-large-and-up {
     padding: 0;
@@ -31,7 +31,7 @@
     align-items: center;
     cursor: pointer;
     display: block;
-    padding: $space-md;
+    padding: $sp-2;
     width: 25vw;
     min-width: 150px;
     max-width: 200px;
@@ -55,7 +55,7 @@
     font-size: $font-size-xs;
     font-weight: 700;
     margin: 0;
-    padding: $space-xs $space-md;
+    padding: $sp-1 $sp-2;
     transition: 0.2s all;
 
     &:hover {
@@ -81,7 +81,7 @@
       display: flex;
       height: auto;
       margin: 0;
-      padding: $space-xs 0 $space-xs $space-xs;
+      padding: $sp-1 0 $sp-1 $sp-1;
       position: static;
       width: auto;
     }
@@ -182,7 +182,7 @@
     font-weight: bold;
     line-height: 1;
     margin: 0 0.4rem 0 1rem;
-    padding: $space-sm $space-lg;
+    padding: $sp-1x $sp-4;
 
     &:hover,
     &:focus {
@@ -232,12 +232,12 @@
   }
 
   ul {
-    margin-top: $space-lg;
+    margin-top: $sp-4;
   }
 
   li {
     list-style-type: none;
-    margin-bottom: $space-lg;
+    margin-bottom: $sp-4;
 
     // Dropdown menus
     ul.dropdown {

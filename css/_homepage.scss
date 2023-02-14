@@ -7,17 +7,17 @@ body.homepage {
   background-color: transparent;
   background-image: url("img/p4-homepage-header-illo2.jpg");
   background-repeat: no-repeat;
-  background-position: right #{$space-lg};
-  background-size: calc(100% - #{$space-lg} + 4px) auto;
+  background-position: right #{$sp-4};
+  background-size: calc(100% - #{$sp-4} + 4px) auto;
 
   .homepage-intro-illo {
     padding-top: 72%;
-    margin-bottom: $space-md;
+    margin-bottom: $sp-2;
   }
 
   .section-title {
     font-size: 1.75rem;
-    margin-bottom: $space-md;
+    margin-bottom: $sp-2;
   }
   @media screen and (min-width: $medium-width) {
     & {
@@ -29,7 +29,7 @@ body.homepage {
       align-items: center;
       display: grid;
       grid-template-columns: 2fr 3fr;
-      grid-gap: $space-md;
+      grid-gap: $sp-2;
     }
 
     .homepage-intro-text {
@@ -65,7 +65,7 @@ body.homepage {
     background-repeat: no-repeat;
     background-position: top left;
     width: 100%;
-    margin-bottom: $space-md;
+    margin-bottom: $sp-2;
     padding-top: 69%;
     transform: scale(1.05);
     @media screen and (min-width: $small-width) and (max-width: $medium-width) {
@@ -88,10 +88,10 @@ body.homepage {
   background-size: 95% auto;
   background-repeat: no-repeat;
   background-position: right top;
-  margin-top: $space-md;
+  margin-top: $sp-2;
 
   .section-illo {
-    margin-bottom: $space-md;
+    margin-bottom: $sp-2;
     order: 2;
     padding-top: 70%;
     @include medium-and-up {
@@ -128,14 +128,14 @@ body.homepage {
 
 .features-list {
   display: grid;
-  grid-gap: $space-md;
+  grid-gap: $sp-2;
   grid-template-columns: repeat(1, 1fr);
-  margin-top: $space-xxl;
-  margin-bottom: $space-lg;
+  margin-top: $sp-8;
+  margin-bottom: $sp-4;
   padding-left: 0;
 
   @include small-and-up {
-    grid-gap: $space-xl;
+    grid-gap: $sp-6;
     grid-template-columns: repeat(2, 1fr);
   }
   @include large-and-up {
@@ -144,7 +144,7 @@ body.homepage {
 
   .feature {
     list-style-type: none;
-    margin-bottom: $space-md;
+    margin-bottom: $sp-2;
     text-align: center;
   }
   @media screen and (min-width: $small-width) and (max-width: $large-width) {
@@ -161,9 +161,9 @@ body.homepage {
     background-size: cover;
     border-radius: 4px;
     padding-bottom: 62.5%;
-    margin-bottom: $space-sm;
+    margin-bottom: $sp-1x;
     @include medium-and-up {
-      margin-bottom: $space-md;
+      margin-bottom: $sp-2;
     }
   }
 
@@ -182,7 +182,7 @@ body.homepage {
   .feature-title {
     font-size: $font-size-lg;
     margin-top: 0;
-    margin-bottom: $space-sm;
+    margin-bottom: $sp-1x;
   }
 
   .feature-learn_more {
@@ -197,10 +197,10 @@ body.homepage {
 #homepage-resources {
   .resources-list {
     display: grid;
-    grid-gap: $space-lg;
+    grid-gap: $sp-4;
     grid-template-columns: repeat(1, 1fr);
-    margin-top: $space-xxl;
-    margin-bottom: $space-xxl;
+    margin-top: $sp-8;
+    margin-bottom: $sp-8;
     padding-left: 0;
 
     @include small-and-up {
@@ -220,7 +220,7 @@ body.homepage {
     .resource-title {
       font-size: $font-size-lg;
       margin-top: 0;
-      margin-bottom: $space-md;
+      margin-bottom: $sp-2;
     }
 
     .resource-learn_more {
@@ -238,20 +238,20 @@ body.homepage {
   background-image: url("img/p4-illo-screenshot.jpg");
   background-position: right 95%;
   background-repeat: no-repeat;
-  background-size: calc(100% - #{$space-lg}) auto;
+  background-size: calc(100% - #{$sp-4}) auto;
   padding-bottom: 80%;
   @include small-and-up {
-    padding-bottom: $space-xl;
-    background-position: 75vw $space-lg;
+    padding-bottom: $sp-6;
+    background-position: 75vw $sp-4;
     background-size: auto 80%;
   }
 
   @include medium-and-up {
-    background-position: 61vw $space-xl;
+    background-position: 61vw $sp-6;
   }
 
   .section-inner {
-    margin: $space-md auto $space-sm;
+    margin: $sp-2 auto $sp-1x;
     @media screen and (min-width: $small-width) and (max-width: $medium-width) {
       display: grid;
       grid-template-columns: 80% 1fr;
@@ -264,7 +264,7 @@ body.homepage {
     @include medium-and-up {
       align-items: center;
       display: grid;
-      grid-gap: $space-xl;
+      grid-gap: $sp-6;
       grid-template-columns: 3fr 2fr;
     }
   }
@@ -310,20 +310,20 @@ body.homepage {
     display: flex;
     font-family: $roboto;
     font-size: $font-size-sm;
-    margin-top: $space-lg;
+    margin-top: $sp-4;
   }
 
   figcaption img {
     background-color: #aaa;
     border-radius: 100px;
     display: inline-block;
-    height: $space-lg;
-    margin-right: $space-sm;
-    width: $space-lg;
+    height: $sp-4;
+    margin-right: $sp-1x;
+    width: $sp-4;
     @include medium-and-up {
-      height: $space-xl;
-      margin-right: $space-md;
-      width: $space-xl;
+      height: $sp-6;
+      margin-right: $sp-2;
+      width: $sp-6;
     }
   }
 }
@@ -333,14 +333,14 @@ body.homepage {
     @include medium-and-up {
       align-items: center;
       display: grid;
-      grid-gap: $space-xl;
+      grid-gap: $sp-6;
       grid-template-columns: 2fr 3fr;
     }
   }
 
   .section-header {
     text-align: left;
-    margin-bottom: $space-sm;
+    margin-bottom: $sp-1x;
   }
 
   .section-description {
@@ -354,8 +354,8 @@ body.homepage {
   .homepage-team-image {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: $space-md;
-    margin-top: $space-lg;
+    grid-gap: $sp-2;
+    margin-top: $sp-4;
 
     @include small-and-up {
       grid-template-columns: repeat(8, 1fr);
@@ -363,7 +363,7 @@ body.homepage {
 
     @include medium-and-up {
       margin: 0;
-      grid-gap: $space-lg;
+      grid-gap: $sp-4;
       grid-template-columns: repeat(5, 1fr);
     }
 
@@ -380,12 +380,12 @@ body.homepage {
 
   .section-inner {
     @media screen and (max-width: $medium-width) {
-      padding: $space-md 0;
+      padding: $sp-2 0;
     }
 
     @include medium-and-up {
       display: grid;
-      grid-gap: $space-xxl;
+      grid-gap: $sp-8;
       grid-template-columns: 4fr 3fr;
     }
   }
@@ -395,7 +395,7 @@ body.homepage {
   }
 
   .contact-intro {
-    margin-bottom: $space-lg;
+    margin-bottom: $sp-4;
   }
 
   .contact-headline {
@@ -417,7 +417,7 @@ body.homepage {
   .contact-form {
     @include large-and-up {
       .input-radio-group {
-        margin: $space-md 0 $space-lg;
+        margin: $sp-2 0 $sp-4;
       }
     }
   }

@@ -1,13 +1,13 @@
 /* Section styles */
 .section {
-  padding: $space-lg;
-  margin-bottom: $space-xl;
+  padding: $sp-4;
+  margin-bottom: $sp-6;
 
   @include medium-and-up {
-    padding: $space-xxl;
+    padding: $sp-8;
   }
   @include large-and-up {
-    padding: 72px $space-xxl;
+    padding: 72px $sp-8;
   }
 
   p {
@@ -27,13 +27,13 @@
 }
 
 .section-header {
-  margin-bottom: $space-md;
+  margin-bottom: $sp-2;
 }
 
 .section-title {
-  margin-bottom: $space-xs;
+  margin-bottom: $sp-1;
   @include medium-and-up {
-    margin-bottom: $space-md;
+    margin-bottom: $sp-2;
   }
 }
 
@@ -42,7 +42,7 @@
   align-items: center;
   display: flex;
   min-height: 400px;
-  padding-top: $space-xxl;
+  padding-top: $sp-8;
 
   .section-title {
     text-align: inherit;
@@ -58,7 +58,7 @@
 
   @include medium-and-up {
     display: grid;
-    grid-gap: $space-xxl;
+    grid-gap: $sp-8;
     grid-template-columns: 1fr 1fr;
   }
 

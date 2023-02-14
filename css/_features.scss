@@ -3,12 +3,12 @@
   background-color: transparent;
   background-image: url("img/features/p4-features-intro.jpg");
   background-repeat: no-repeat;
-  background-position: right #{$space-md};
-  background-size: calc(100% - #{$space-md}) auto;
+  background-position: right #{$sp-2};
+  background-size: calc(100% - #{$sp-2}) auto;
 
   .features-intro-illo {
     padding-top: 65%;
-    margin-bottom: $space-md;
+    margin-bottom: $sp-2;
   }
   @media screen and (min-width: $small-width) {
     background-size: 80% auto;
@@ -21,7 +21,7 @@
     .section-inner {
       align-items: center;
       display: grid;
-      grid-gap: $space-lg;
+      grid-gap: $sp-4;
       grid-template-columns: 2fr 3fr;
     }
 
@@ -32,7 +32,7 @@
 
   .section-title {
     font-size: 2.5rem;
-    margin-bottom: $space-md;
+    margin-bottom: $sp-2;
   }
   @media screen and (min-width: $medium-width) {
     & {
@@ -150,7 +150,7 @@
   }
 
   .section-header {
-    margin-bottom: $space-lg;
+    margin-bottom: $sp-4;
   }
 
   .coming-soon .expando-link {
@@ -173,7 +173,7 @@
 }
 
 .features .features-list {
-  margin-top: $space-xl;
+  margin-top: $sp-6;
 
   .feature-illo.feature-circle {
     align-items: center;
@@ -187,7 +187,7 @@
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    padding: $space-lg;
+    padding: $sp-4;
     width: 128px;
 
     &.feature-secure-performant {
@@ -280,9 +280,9 @@
     display: grid;
     font-size: $font-size-sm;
     grid-template-columns: 1fr;
-    grid-gap: $space-md;
+    grid-gap: $sp-2;
     margin-left: 0;
-    margin-top: $space-xl;
+    margin-top: $sp-6;
     padding-left: 0;
     @media screen and (min-width: $medium-width) {
       & {
@@ -301,7 +301,7 @@
 
     li {
       list-style-type: none;
-      margin-bottom: $space-md;
+      margin-bottom: $sp-2;
       padding-left: 88px;
       position: relative;
     }
@@ -325,7 +325,7 @@
   li p.optimization-title {
     font-weight: bold;
     font-size: $font-size-md;
-    margin-bottom: $space-xs;
+    margin-bottom: $sp-1;
   }
 
   .optimization-traffic::before {
@@ -368,9 +368,9 @@
 #features-integrations {
   .integrations-list {
     display: grid;
-    grid-gap: $space-xl $space-md;
+    grid-gap: $sp-6 $sp-2;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: $space-xl;
+    margin-top: $sp-6;
     padding-left: 0;
     @media screen and (min-width: $medium-width) {
       grid-template-columns: repeat(3, 1fr);

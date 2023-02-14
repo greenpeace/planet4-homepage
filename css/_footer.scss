@@ -7,23 +7,24 @@
 
   a {
     color: $white;
+    text-decoration: none;
   }
 
   @include medium-and-up {
     .section-inner {
       display: grid;
-      grid-gap: $space-xl;
+      grid-gap: $sp-6;
       grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     }
   }
 
   nav {
-    margin-bottom: $space-lg;
+    margin-bottom: $sp-4;
   }
 
   nav h2 {
     font-size: $font-size-lg;
-    margin-bottom: $space-sm;
+    margin-bottom: $sp-1x;
   }
 
   nav ul {
@@ -33,6 +34,7 @@
 
   nav li {
     list-style-type: none;
+    margin-bottom: $sp-3;
   }
 
   #site-footer-info {
@@ -43,12 +45,12 @@
       font-size: $font-size-lg;
       font-weight: bold;
       margin-top: 0;
-      margin-bottom: $space-sm;
+      margin-bottom: $sp-1x;
     }
   }
 }
 
 .illo-credit {
   font-size: $font-size-xs;
-  margin-top: $space-xl;
+  margin-top: $sp-6;
 }

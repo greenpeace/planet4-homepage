@@ -20,6 +20,7 @@ a {
 h1,h2,h3,h4,h5,h6 {
   margin-top: 0;
   line-height: 1.25;
+  font-family: var(--headings--font-family);
 }
 
 p, li {
@@ -30,7 +31,7 @@ p, li {
 }
 
 p {
-  margin-bottom: $space-sm;
+  margin-bottom: $sp-1x;
 }
 
 p:last-child,
@@ -41,7 +42,7 @@ blockquote:last-child {
 
 blockquote {
   font-size: $font-size-lg;
-  margin: 0 0 $space-md;
+  margin: 0 0 $sp-2;
   max-width: 100%;
 }
 
@@ -55,7 +56,7 @@ ul {
   display: inline-block;
   line-height: 1;
   margin-bottom: 0;
-  padding: $space-md 24px;
+  padding: $sp-2 24px;
   white-space: nowrap;
 }
 
@@ -69,7 +70,7 @@ ul {
   flex-wrap: wrap;
 
   .btn {
-    margin: 0 $space-xs $space-sm 0;
+    margin: 0 $sp-1 $sp-1x 0;
   }
 }
 

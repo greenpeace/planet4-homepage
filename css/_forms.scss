@@ -1,7 +1,7 @@
 /* form styles */
 .input {
   font-family: $roboto;
-  margin-bottom: $space-sm;
+  margin-bottom: $sp-1x;
 
   input[type="text"],
   input[type="email"],
@@ -23,7 +23,7 @@
 .input-checkbox {
   display: flex;
   position: relative;
-  padding-left: calc(1em + #{$space-sm});
+  padding-left: calc(1em + #{$sp-1x});
 
   label[for] {
     cursor: pointer;
@@ -65,13 +65,13 @@
 }
 
 .input-radio-group {
-  margin-bottom: $space-md;
+  margin-bottom: $sp-2;
 }
 
 .radio-group-label {
   font-weight: bold;
   font-size: $font-size-xl;
-  margin-bottom: $space-md;
+  margin-bottom: $sp-2;
 }
 
 .input-text,
