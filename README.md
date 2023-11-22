@@ -4,13 +4,19 @@
 
 ## Run
 
-Some basic npm scripts are included:
+Some basic npm scripts are included.
+
+Start by switching to Node 16
+
+```bash
+nvm use 16
+```
 
 ### Lint
 
 ```bash
 npm run lint-js
-npm run lint-csss
+npm run lint-css
 ```
 
 ### Build
@@ -20,4 +26,8 @@ npm run build
 npm run static-dev
 ```
 
-This will build the website under the `dist/` folder.
+### Run
+
+```bash
+npm run server
+```
