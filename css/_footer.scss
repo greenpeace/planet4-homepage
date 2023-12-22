@@ -1,9 +1,13 @@
 /* Footer styles */
 #site-footer {
-  background-color: #042a40;
+  background-color: var(--p4-dark-green-900);
   color: $white;
-  font-family: $roboto;
+  font-family: var(--font-family-secondary);
   font-size: $font-size-sm;
+
+  h2 {
+    color: $white;
+  }
 
   a {
     color: $white;
@@ -43,7 +47,7 @@
 
     .site-footer-p4-name {
       font-size: $font-size-lg;
-      font-weight: bold;
+      font-family: var(--font-family-primary);
       margin-top: 0;
       margin-bottom: $sp-1x;
     }

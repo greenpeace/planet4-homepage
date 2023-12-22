@@ -1,7 +1,7 @@
 /* Features page styles */
 #features-intro {
   background-color: transparent;
-  background-image: url("img/features/p4-features-intro.jpg");
+  background-image: url("img/features/p4-features-intro.png");
   background-repeat: no-repeat;
   background-position: right #{$sp-2};
   background-size: calc(100% - #{$sp-2}) auto;
@@ -30,38 +30,25 @@
     }
   }
 
-  .section-title {
-    font-size: 2.5rem;
-    margin-bottom: $sp-2;
-  }
   @media screen and (min-width: $medium-width) {
     & {
       background-size: 58% auto;
       background-position: right center;
     }
-
-    .section-title {
-      font-size: 3rem;
-    }
-  }
-  @media screen and (min-width: $large-width) {
-    .section-title {
-      font-size: 2.5rem;
-    }
   }
 
   p {
-    font-family: $roboto, sans-serif;
+    font-family: var(--font-family-secondary);
     font-size: 18px;
   }
 
   .btn-container {
-    margin-top: 32px;
+    margin-top: $sp-4;
   }
 }
 
 #features-builder {
-  background-color: $grey_05;
+  background-color: var(--beige-100);
   background-image: url("img/features/p4-features-website-builder.png");
   background-position: left 32px;
   background-repeat: no-repeat;
@@ -154,8 +141,8 @@
   }
 
   .coming-soon .expando-link {
-    padding-top: 24px;
-    padding-bottom: 8px;
+    padding-top: $sp-3;
+    padding-bottom: $sp-1;
   }
 
   .coming-soon .expando-link::before {
@@ -165,10 +152,10 @@
     left: -1px;
     position: absolute;
     top: 3px;
-    padding: 1px 4px;
-    background-color: $grey_10;
+    padding: 1px $sp-x;
+    background-color: var(--grey-200);
     border-radius: 4px;
-    color: $grey_40;
+    color: var(--grey-800);
   }
 }
 
@@ -177,7 +164,7 @@
 
   .feature-illo.feature-circle {
     align-items: center;
-    background-color: #edf3fa;
+    background-color: var(--beige-100);
     background-position: center;
     background-size: 50% auto;
     background-repeat: no-repeat;
@@ -218,8 +205,8 @@
   background-position: right top;
   background-repeat: no-repeat;
   background-size: calc(100% - 32px);
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: $sp-3;
+  padding-bottom: $sp-3;
 
   .feature-image-container {
     padding-top: 75%;
@@ -248,12 +235,12 @@
 }
 
 #features-extensible {
-  background-image: url("img/features/p4-features-extensible.jpg");
+  background-image: url("img/features/p4-features-extensible.png");
   background-position: left top;
   background-repeat: no-repeat;
   background-size: calc(100% - 32px);
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: $sp-3;
+  padding-bottom: $sp-3;
 
   .feature-image-container {
     padding-top: 75%;
@@ -307,7 +294,7 @@
     }
 
     li::before {
-      background-color: #edf3fa;
+      background-color: var(--beige-100);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 60% auto;
@@ -323,7 +310,7 @@
   }
 
   li p.optimization-title {
-    font-weight: bold;
+    font-family: var(--font-family-primary);
     font-size: $font-size-md;
     margin-bottom: $sp-1;
   }
@@ -362,7 +349,7 @@
 
 .feature-image-container {
   font-size: 0;
-  margin-bottom: 24px;
+  margin-bottom: $sp-3;
 }
 
 #features-integrations {

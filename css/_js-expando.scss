@@ -9,13 +9,15 @@
   display: block;
   font-size: 1.1em;
   line-height: 1.5;
-  padding: 16px 48px 16px 0;
+  padding: $sp-2 $sp-6 $sp-2 0;
   position: relative;
   text-decoration: none;
+  font-family: var(--font-family-primary);
 }
 
 .expando-link:hover {
   color: inherit;
+  text-decoration: none;
 }
 
 .mobile-expando-link,
@@ -24,12 +26,12 @@
 }
 
 .expando-link::after {
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.225.76a.857.857 0 010 1.257L8.663 8.24a.974.974 0 01-1.326 0L.775 2.017a.857.857 0 010-1.257.974.974 0 011.325 0L8 6.354 13.9.76a.976.976 0 011.23-.08z' fill='%236F7376' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.225.76a.857.857 0 010 1.257L8.663 8.24a.974.974 0 01-1.326 0L.775 2.017a.857.857 0 010-1.257.974.974 0 011.325 0L8 6.354 13.9.76a.976.976 0 011.23-.08z' fill='var(--grey-900)' fill-rule='evenodd'/%3E%3C/svg%3E");
   background-size: 15px 8px;
   content: "";
   height: 8px;
   position: absolute;
-  right: 24px;
+  right: $sp-3;
   top: 1.3em;
   top: calc(0.8rem + 0.7em);
   transition: 0.5s all;
@@ -52,7 +54,7 @@
   height: auto;
   opacity: 1;
   overflow: auto;
-  padding: 8px 0 16px 0;
+  padding: $sp-1 0 $sp-2 0;
 }
 
 .expando-link.expanded::after,
