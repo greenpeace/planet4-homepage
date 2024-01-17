@@ -12,7 +12,7 @@
     "static-prod": "replace-in-file '/{{ base_url }}/g' 'https://storage.googleapis.com/planet4-homepage/' dist/index.html,dist/features/index.html --isRegex; replace-in-file '/{{ domain }}/g' 'https://planet4.greenpeace.org/' dist/index.html,dist/features/index.html --isRegex",
     "static-dev": "replace-in-file '/{{ base_url }}/g' '/' dist/index.html,dist/features/index.html --isRegex ; replace-in-file '/{{ domain }}/g' '/' dist/index.html,dist/features/index.html --isRegex",
     "build": "npm run build-sass && npm run build-js && cp index.html dist/ && cp -r img/. dist/img/ && cp -r features/. dist/features/",
-    "publish": "gcloud storage rsync dist/ gs://planet4-homepage/ --recursive",
+    "publish": "gsutil -m rsync -r dist/ gs://planet4-homepage/",
     "server": "npx http-server dist"
   },
   "license": "GPLv3",
