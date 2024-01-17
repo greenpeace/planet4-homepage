@@ -11,7 +11,7 @@
   }
 
   p {
-    font-family: $roboto, sans-serif;
+    font-family: var(--font-family-secondary);
   }
 
   .btn-primary {
@@ -46,7 +46,11 @@
 
   .section-title {
     text-align: inherit;
-    font-size: $font-size-xxl;
+    font-size: var(--font-size-xl--font-family-primary);
+
+    @include large-and-up {
+      font-size: var(--font-size-2xl--font-family-primary);
+    }
   }
 }
 

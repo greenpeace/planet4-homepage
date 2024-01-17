@@ -1,6 +1,6 @@
 /* form styles */
 .input {
-  font-family: $roboto;
+  font-family: var(--font-family-secondary);
   margin-bottom: $sp-1x;
 
   input[type="text"],
@@ -9,7 +9,7 @@
   textarea,
   select {
     display: block;
-    font-family: $roboto;
+    font-family: var(--font-family-secondary);
     width: 100%;
   }
 
@@ -70,7 +70,7 @@
 
 .radio-group-label {
   font-weight: bold;
-  font-size: $font-size-xl;
+  font-size: var(--font-size-xl--font-family-primary);
   margin-bottom: $sp-2;
 }
 
@@ -80,13 +80,13 @@
   font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
-  margin-bottom: 16px;
+  margin-bottom: $sp-2;
   position: relative;
 }
 
 .input-text label,
 .input-textarea label {
-  color: #6f7376;
+  color: var(--grey-600);
   cursor: text;
   font-weight: 400;
   left: 15px;
@@ -116,7 +116,7 @@
 
 .input-text input:hover
 .input-textarea textarea:hover {
-  border: 1px solid #6f7376;
+  border: 1px solid var(--grey-600);
 }
 /* Replace default focus style with border-color */
 .input-text input:focus,

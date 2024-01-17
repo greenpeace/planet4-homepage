@@ -25,7 +25,7 @@ a {
 h1,h2,h3,h4,h5,h6 {
   margin-top: 0;
   line-height: 1.25;
-  font-family: var(--headings--font-family);
+  font-family: var(--font-family-primary);
 }
 
 p, li {
@@ -56,56 +56,93 @@ ul {
   padding-left: 1.5em;
 }
 
-.btn,
-.btn-primary,
-.btn-secondary {
+.btn {
   display: inline-block;
-  line-height: 1;
   margin-bottom: 0;
-  padding: $sp-2 24px;
   white-space: nowrap;
+  font-family: var(--font-family-button);
+  font-size: $font-size-sm;
+  line-height: 3;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0 $sp-3;
+  transition-property: color, background-color, border-color;
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+
+  &:focus {
+    outline: 2px solid rgba(0, 106, 255, 0.4);
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: 0;
+  }
+
+  &:hover,
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
 }
 
 .btn-secondary {
   width: auto;
   max-width: 25rem;
   background: transparentize($white, .7);
-  border-color: $dark-blue;
-  color: $dark-blue;
-  box-shadow: none;
+  border-color: var(--color-border-button--secondary);
+  color: var(--color-border-button--secondary);
 
   &:visited {
-    color: $dark-blue;
+    color: var(--p4-dark-green-800);
   }
 
   &:hover {
-    background: $dark-blue;
-    border-color: $dark-blue;
+    background: var(--color-background-button--secondary-hover);
+    border-color: var(--color-background-button--secondary-hover);
     color: $white;
   }
 
   &:active {
-    background: $active-blue;
-    border-color: $active-blue;
+    background: var(--p4-dark-green-800);
+    border-color: var(--p4-dark-green-800);
   }
 }
 
 .btn-primary {
-  background: $orange;
-  color: $white;
+  background: var(--color-background-button--cta);
+  color: var(--color-text-button--cta);
   border-color: transparent;
-  box-shadow: $primary-button-box-shadow;
 
   &:visited {
-    color: $white;
+    color: var(--color-text-button--cta);
   }
 
   &:hover,
   &:active {
-    background: $orange-hover;
-    color: $white;
-    border: 1px solid $orange-hover;
-    box-shadow: $primary-button-box-shadow;
+    background: var(--color-background-button--cta-hover);
+    color: var(--color-text-button--cta);
+    border: 1px solid transparent;
+  }
+}
+
+.btn-donate {
+  background: var(--gp-green-400);
+  color: var(--grey-900);
+  min-width: 180px;
+  border-width: 1px;
+  border-color: transparent;
+  line-height: 1.65;
+
+  &:hover {
+    background: var(--gp-green-500);
+    color: var(--grey-900);
+    border: 1px solid transparent;
+  }
+
+  &:visited {
+    color: var(--grey-900);
   }
 }
 
@@ -124,7 +161,7 @@ nav li {
 
 .expando {
   border-color: rgba(0, 0, 0, 0.1);
-  font-family: $roboto;
+  font-family: var(--font-family-primary);
 }
 
 .expando-link {
