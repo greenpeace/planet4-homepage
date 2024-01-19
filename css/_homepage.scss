@@ -133,6 +133,7 @@ body.homepage {
   margin-top: $sp-8;
   margin-bottom: $sp-4;
   padding-left: 0;
+  text-align: center;
 
   @include small-and-up {
     grid-gap: $sp-6;
