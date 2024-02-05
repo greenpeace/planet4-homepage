@@ -13,7 +13,7 @@
     "static-dev": "replace-in-file '/{{ base_url }}/g' '/' dist/index.html,dist/features/index.html --isRegex ; replace-in-file '/{{ domain }}/g' '/' dist/index.html,dist/features/index.html --isRegex",
     "build": "npm run build-sass && npm run build-js && cp index.html dist/ && cp -r img/. dist/img/ && cp -r features/. dist/features/",
     "test-gcloud": "gcloud storage rsync -h",
-    "publish": "gsutil -m rsync -r dist/ gs://planet4-homepage/",
+    "publish": "gcloud storage rsync dist/ gs://planet4-homepage/ --recursive",
     "server": "npx http-server dist"
   },
   "license": "GPLv3",
