@@ -69,7 +69,7 @@ jobs:
           command: npm run static-prod
       - run:
           name: Test gcloud components
-          command: npm run test-gcloud | true
+          command: npm run test-gcloud
       - run:
           name: Build website
           command: npm run publish
