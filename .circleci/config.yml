@@ -68,6 +68,9 @@ jobs:
           name: Replace static domains
           command: npm run static-prod
       - run:
+          name: Test gcloud components
+          command: npm run test-gcloud | true
+      - run:
           name: Build website
           command: npm run publish
       - run:
