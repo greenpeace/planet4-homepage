@@ -16,10 +16,13 @@ defaults: &defaults
 jobs:
   lint:
     docker:
-      - image: greenpeaceinternational/p4-unit-tests:nodelts
+      - image: cimg/node:20.18.3
         auth: &docker_auth
     steps:
       - checkout
+      - run:
+          name: Install dependencies
+          command: npm ci
       - run:
           name: Lint css
           command: npm run lint-css

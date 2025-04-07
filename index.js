@@ -1,4 +1,4 @@
-/* global addEventListener, fetch */
+/* global addEventListener */
 
 addEventListener('fetch', event => {
   event.passThroughOnException();
